@@ -15,12 +15,12 @@ This repo demonstrates the application of ZED camera streaming via WebRTC.
 
 ## Prerequisite
 1. **CUDA Toolkit**
-    If using ZED Box or Jetson AGX Orin, the OS were pre-installed, follow the [official guide](https://docs.nvidia.com/jetson/jetpack/install-jetpack/index.html) to install Jetpack.
+    If using ZED Box or Jetson AGX Orin, the OS were pre-installed, follow the [official guide](https://docs.nvidia.com/jetson/jetpack/install-jetpack/index.html) to install JetPack.
     ```bash
     sudo apt update
     sudo apt install nvidia-jetpack
     ```
-    After jetpack installed, add following lines under `~/.bashrc` for CUDA environment setup.
+    After JetPack installed, add following lines under `~/.bashrc` for CUDA environment setup.
     ```md
     export CUDA_HOME=/usr/local/cuda
     export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
@@ -102,3 +102,10 @@ In this example, the viewer need to be executed first.
         h.264 encode param. See [quantizer](https://gstreamer.freedesktop.org/documentation/x264/index.html#x264enc:quantizer).
     - `x264-preset`
         h.264 encode param. See [GstX264EncPreset](https://gstreamer.freedesktop.org/documentation/x264/index.html#GstX264EncPreset).
+
+## Reference
+[JetPack Install](https://docs.nvidia.com/jetson/jetpack/install-jetpack/index.html)
+[ZED SDK](https://www.stereolabs.com/developers/release)
+[zed-gstreamer](https://github.com/stereolabs/zed-gstreamer)
+[gstreamer-webrtc](https://github.com/GStreamer/gst-examples)
+[x264enc](https://gstreamer.freedesktop.org/documentation/x264/index.html?gi-language=c)
